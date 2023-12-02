@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "message_sent_from_users",
+  "info": {
+    "singularName": "message-sent-from-user",
+    "pluralName": "message-sent-from-users",
+    "displayName": "message_sent_from_user"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    }
+  }
+}
