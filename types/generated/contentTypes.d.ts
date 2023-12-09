@@ -764,12 +764,19 @@ export interface ApiProjectProject extends Schema.CollectionType {
     location: Attribute.String;
     category: Attribute.String;
     title: Attribute.String & Attribute.Required;
-    description: Attribute.Text;
     project_images: Attribute.Media;
     project_videos: Attribute.Media;
     time_of_completion: Attribute.Date &
       Attribute.Required &
       Attribute.DefaultTo<'2023-12-08'>;
+    description: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
